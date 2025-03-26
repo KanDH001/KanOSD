@@ -1,0 +1,347 @@
+{
+  "main": {
+    "id": "ab942fd0f254d0ca",
+    "type": "split",
+    "children": [
+      {
+        "id": "59d3d44e24c27c85",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "ad37673f197f7043",
+            "type": "leaf",
+            "pinned": true,
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "README.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              },
+              "pinned": true
+            }
+          },
+          {
+            "id": "c6135b3486af3d34",
+            "type": "leaf",
+            "pinned": true,
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Home.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              },
+              "pinned": true
+            }
+          },
+          {
+            "id": "2af468f51bac5145",
+            "type": "leaf",
+            "pinned": true,
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "4. Blueprint/Obsidian FLOW Methodology.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              },
+              "pinned": true
+            }
+          },
+          {
+            "id": "10552c9d7e3a4ae6",
+            "type": "leaf",
+            "pinned": true,
+            "state": {
+              "type": "graph",
+              "state": {},
+              "pinned": true
+            }
+          },
+          {
+            "id": "f3459c8f399b04ea",
+            "type": "leaf",
+            "pinned": true,
+            "state": {
+              "type": "mindmapView",
+              "state": {
+                "file": "1. Capture/Giới thiệu Obsidian FLOW.md"
+              },
+              "pinned": true
+            }
+          }
+        ],
+        "currentTab": 4
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "b71da78673a00d12",
+    "type": "split",
+    "children": [
+      {
+        "id": "a82c2839e6188120",
+        "type": "tabs",
+        "dimension": 53.20829220138204,
+        "children": [
+          {
+            "id": "5937c74a9416a612",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "74fba6d72c0302ad",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "tag:migration",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "90060adcb2ad0930",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      },
+      {
+        "id": "66be9d45f09c9c3e",
+        "type": "tabs",
+        "dimension": 46.79170779861796,
+        "children": [
+          {
+            "id": "bfbf1988d2ea4916",
+            "type": "leaf",
+            "state": {
+              "type": "tasks_timeline_view",
+              "state": {}
+            }
+          },
+          {
+            "id": "73a345c83018a0a9",
+            "type": "leaf",
+            "state": {
+              "type": "reminder-list",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 312.5
+  },
+  "right": {
+    "id": "b2a70d1e73e50140",
+    "type": "split",
+    "children": [
+      {
+        "id": "41681102ef631353",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "5bfa6da26e6d3b5d",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {}
+            }
+          },
+          {
+            "id": "0ef4bfe0653f5e3f",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "1. Capture/Giới thiệu Obsidian FLOW.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "77f9b9b972598201",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "1. Capture/Giới thiệu Obsidian FLOW.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "74f0348e2fe16e65",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "f108dd453abfe7f7",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              }
+            }
+          },
+          {
+            "id": "3879db93b84c6786",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "1. Capture/Giới thiệu Obsidian FLOW.md"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "ca3b5d56810ea257",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "15cbcb4fa8cff1ab",
+            "type": "leaf",
+            "state": {
+              "type": "localgraph",
+              "state": {
+                "file": "1. Capture/Giới thiệu Obsidian FLOW.md",
+                "options": {
+                  "collapse-filter": true,
+                  "search": "",
+                  "localJumps": 1,
+                  "localBacklinks": true,
+                  "localForelinks": true,
+                  "localInterlinks": false,
+                  "showTags": false,
+                  "showAttachments": false,
+                  "hideUnresolved": false,
+                  "collapse-color-groups": true,
+                  "colorGroups": [],
+                  "collapse-display": true,
+                  "showArrow": false,
+                  "textFadeMultiplier": 0,
+                  "nodeSizeMultiplier": 1,
+                  "lineSizeMultiplier": 1,
+                  "collapse-forces": true,
+                  "centerStrength": 0.518713248970312,
+                  "repelStrength": 10,
+                  "linkStrength": 1,
+                  "linkDistance": 250,
+                  "scale": 1,
+                  "close": true
+                }
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 382.5,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "random-note:Open random note": false,
+      "audio-recorder:Start/stop recording": false,
+      "workspaces:Manage workspace layouts": false,
+      "callout-manager:Insert Callout": false,
+      "obsidian-excalidraw-plugin:Create new drawing": false,
+      "templater-obsidian:Templater": false,
+      "obsidian-projects:Open projects": false,
+      "file-cleaner-redux:Clean files": false,
+      "dashboard-navigator:Open dashboard navigator": false,
+      "homepage:Open homepage": false
+    }
+  },
+  "active": "f3459c8f399b04ea",
+  "lastOpenFiles": [
+    "5. Exhibit/FLOW & PKM/1. Giới thiệu phương pháp FLOW.md",
+    "1. Capture/Giới thiệu Obsidian FLOW.md",
+    "3. Forge/FLOW system/3. Hướng dẫn nhanh để bắt đầu viết và tổ chức ghi chú.md",
+    "3. Forge/FLOW system/2. Nguyên tắc áp dụng phương pháp FLOW.md",
+    "3. Forge/FLOW system/1a. Tuỳ biến tên thư mục theo phong cách của bạn.md",
+    "3. Forge/FLOW system/1. Phương pháp quản lý cấu trúc Vault linh hoạt với FLOW.md",
+    "4. Blueprint/Obsidian FLOW Methodology.md",
+    "README.md",
+    "Home.md",
+    "1. Capture/2, Obsidian Roadmap - From Novice to Master.md",
+    "2. Track/2024-10-06.md",
+    "1..md",
+    "3. Forge/FLOW system/7. Nguyên tắc quản lý properties trong Obsidian FLOW.md",
+    "3. Forge/FLOW system/8. Chiến lược sử dụng tag trong phương pháp FLOW.md",
+    "3. Forge/FLOW system/6. Vòng đời của một ghi chú.md",
+    "1. Capture/Tự động hoá thay đổi nội dung markdown với Python Script.md",
+    "1. Capture/Tại sao chúng ta sợ những điều không có khả năng giết chúng ta_.md",
+    "1. Capture/Điều hướng trong Obsidian FLOW.md",
+    "1. Capture/Chiến lược quản lý chi tiêu.md",
+    "1. Capture/Làm quen các thao tác Git CLI với dòng lệnh.md",
+    "1. Capture/Cài đặt Obsidian Project.md",
+    "1. Capture/Bị Lừa Bởi Sự Ngẫu Nhiên - Cuộc Sống Không Như Ta Nghĩ.md",
+    "1. Capture/1. Xin chào, đây là Thịnh.md",
+    "1. Capture/4. Feedback khoá học Python.md",
+    "1. Capture/0. Tổng quan Vault.md",
+    "5. Exhibit/FLOW & PKM/Cấu trúc thư mục theo phương pháp FLOW.md",
+    "6. Vault/attachments/nha-may-san-xuat-y-tuong-flow 1.png",
+    "6. Vault/attachments/nha-may-san-xuat-y-tuong-flow.png",
+    "6. Vault/attachments/Obsidian_FLOW_is_ready_for_you.png",
+    "6. Vault/attachments/select_the_latest_release_tag.png",
+    "6. Vault/attachments/download_release_zip_file.png",
+    "README.pdf",
+    "6. Vault/attachments/obsidian_vault_feedback_nguyen-truong-thinh.png",
+    "6. Vault/attachments/modify_markdown_yaml_front_matter.png",
+    "6. Vault/attachments/run_python_script_in_visual_studio_code.png",
+    "6. Vault/scripts/yaml_add_field_tkinter_ui.py",
+    "6. Vault/scripts/replace_md_text.py",
+    "6. Vault/scripts/update_properties_time_format.py",
+    "6. Vault/scripts",
+    "6. Vault/attachments/obsidian_flow_github_template_repo.png",
+    "6. Vault/attachments/obsidian_flow_github_download_zip.png",
+    "5. Storage/visuals",
+    "5. Storage",
+    "package-lock.json"
+  ]
+}
