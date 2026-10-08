@@ -9,13 +9,14 @@ Static site: plain HTML, CSS and JavaScript. No build step, no dependencies.
 
 ```
 fairyhooks.com/
-├── index.html            Landing page (hero, how it works, features, free planner, FAQ, early access)
+├── index.html            Landing page (hero, how it works, features, assembly guide, free planner, FAQ, early access)
 ├── privacy.html          Privacy policy
 ├── 404.html              Not found page
 ├── assets/
 │   ├── css/style.css
 │   ├── js/planner.js     Cut list optimizer (guillotine packing with kerf and edge trim)
 │   ├── js/main.js        Navigation, planner UI, CSV export, early access form
+│   ├── js/visuals.js     Hero cut-plan animation, isometric assembly player, scroll reveal
 │   └── img/logo.svg      Logo and favicon
 ├── CNAME                 Custom domain for GitHub Pages
 ├── robots.txt

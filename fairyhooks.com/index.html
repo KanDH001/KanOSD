@@ -46,8 +46,8 @@
       <nav id="nav-menu" class="nav-menu" aria-label="Main">
         <a href="#how">How it works</a>
         <a href="#features">Features</a>
+        <a href="#assembly">Assembly</a>
         <a href="#demo">Try the planner</a>
-        <a href="#who">Who it's for</a>
         <a href="#faq">FAQ</a>
         <a class="btn btn-small" href="#access">Get early access</a>
       </nav>
@@ -63,9 +63,10 @@
           <h1>Cut once.<br>Assemble right.</h1>
           <p class="lead">FairyHooks turns your furniture design into an optimized cut list, a sheet-by-sheet cutting layout and a step-by-step assembly guide. Less waste, fewer wrong cuts, no guessing in the shop.</p>
           <div class="hero-cta">
-            <a class="btn" href="#demo">Try the free planner</a>
-            <a class="btn btn-ghost" href="#how">See how it works</a>
+            <a class="btn" href="#demo">Try the free planner <span aria-hidden="true">→</span></a>
+            <a class="btn btn-ghost" href="#assembly">Watch it assemble</a>
           </div>
+          <p class="microcopy">Free. No signup. Runs in your browser.</p>
           <ul class="hero-points">
             <li>Kerf and grain aware</li>
             <li>Metric and imperial</li>
@@ -73,38 +74,31 @@
           </ul>
         </div>
 
-        <figure class="hero-art" aria-label="Example cutting layout on a plywood sheet">
-          <svg viewBox="0 0 480 340" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-              <pattern id="grain" width="60" height="12" patternUnits="userSpaceOnUse">
-                <path d="M0 6 Q15 2 30 6 T60 6" fill="none" stroke="#d9b98a" stroke-width="1"/>
-              </pattern>
-            </defs>
-            <rect x="10" y="10" width="460" height="230" rx="4" fill="#efd9b4" stroke="#b98d55" stroke-width="2"/>
-            <rect x="10" y="10" width="460" height="230" rx="4" fill="url(#grain)" opacity=".7"/>
-            <g class="hero-parts" font-family="Inter, sans-serif" font-size="11" font-weight="600" fill="#2f4a3a">
-              <rect x="16" y="16" width="200" height="70" fill="#8fbf7a"/><text x="116" y="55" text-anchor="middle">Side panel</text>
-              <rect x="16" y="90" width="200" height="70" fill="#8fbf7a"/><text x="116" y="129" text-anchor="middle">Side panel</text>
-              <rect x="220" y="16" width="160" height="56" fill="#e9b872"/><text x="300" y="48" text-anchor="middle">Shelf</text>
-              <rect x="220" y="76" width="160" height="56" fill="#e9b872"/><text x="300" y="108" text-anchor="middle">Shelf</text>
-              <rect x="220" y="136" width="160" height="56" fill="#e9b872"/><text x="300" y="168" text-anchor="middle">Shelf</text>
-              <rect x="384" y="16" width="80" height="176" fill="#c98f6b"/><text x="424" y="108" text-anchor="middle">Back</text>
-              <rect x="16" y="164" width="200" height="40" fill="#a7c4d9"/><text x="116" y="188" text-anchor="middle">Top</text>
-              <rect x="16" y="208" width="200" height="26" fill="#a7c4d9"/><text x="116" y="225" text-anchor="middle">Kick</text>
-            </g>
-            <line class="saw-line" x1="218" y1="4" x2="218" y2="246" stroke="#c0392b" stroke-width="2" stroke-dasharray="6 5"/>
-            <g font-family="Inter, sans-serif" font-size="12" fill="#3b3227">
-              <rect x="10" y="262" width="220" height="66" rx="10" fill="#fff" stroke="#e4d8c6"/>
-              <text x="24" y="285" font-weight="700">Sheet 1 of 1</text>
-              <text x="24" y="304">Utilization 91%</text>
-              <text x="24" y="320">Kerf 3 mm · Grain locked</text>
-              <rect x="250" y="262" width="220" height="66" rx="10" fill="#fff" stroke="#e4d8c6"/>
-              <text x="264" y="285" font-weight="700">Next step</text>
-              <text x="264" y="304">Rip at 616 mm</text>
-              <text x="264" y="320">then crosscut sides</text>
-            </g>
-          </svg>
-        </figure>
+        <div class="hero-visual">
+          <figure class="app-window" aria-label="FairyHooks app showing an optimized cut plan for a bookshelf">
+            <div class="app-bar">
+              <span class="dots" aria-hidden="true"><i></i><i></i><i></i></span>
+              <span class="app-title">Bookshelf · Cut plan</span>
+              <span class="app-badge">Optimized</span>
+            </div>
+            <div class="app-body">
+              <ul class="app-parts" aria-label="Parts">
+                <li><b class="chip" style="--c:#8fbf7a">A</b><span>Side<small>1800 × 300</small></span><em>×2</em></li>
+                <li><b class="chip" style="--c:#e9b872">B</b><span>Top / bottom<small>764 × 300</small></span><em>×2</em></li>
+                <li><b class="chip" style="--c:#c98f6b">C</b><span>Shelf<small>762 × 290</small></span><em>×3</em></li>
+                <li><b class="chip" style="--c:#a7c4d9">D</b><span>Kick plate<small>764 × 80</small></span><em>×1</em></li>
+              </ul>
+              <div class="app-sheet">
+                <svg id="hero-sheet" role="img" aria-label="Plywood sheet 2440 by 1220 mm with eight parts nested"></svg>
+                <div class="app-result"><span class="check" aria-hidden="true">✓</span><span id="hero-stat">1 sheet · 8 parts</span></div>
+              </div>
+            </div>
+          </figure>
+          <figure class="asm-card" aria-label="Animated assembly preview">
+            <svg id="hero-assembly" role="img" aria-label="Bookshelf assembling step by step"></svg>
+            <figcaption id="hero-assembly-step">Step 1 of 6: Lay out the left side</figcaption>
+          </figure>
+        </div>
       </div>
     </section>
 
@@ -113,18 +107,18 @@
       <div class="container">
         <h2 class="section-title">Most furniture mistakes happen before the first cut</h2>
         <div class="cards three">
-          <article class="card">
-            <div class="icon" aria-hidden="true">📐</div>
+          <article class="card reveal">
+            <div class="icon" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="18" width="36" height="14" rx="2"/><path d="M12 18v5M18 18v8M24 18v5M30 18v8M36 18v5"/><path d="M14 8l20 0M30 4l4 4-4 4" /></svg></div>
             <h3>Math on scrap paper</h3>
             <p>Adding up dimensions by hand, forgetting the blade kerf, and finding out the shelf is 3 mm short when it is already cut.</p>
           </article>
-          <article class="card">
-            <div class="icon" aria-hidden="true">🪵</div>
+          <article class="card reveal">
+            <div class="icon" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"><rect x="5" y="9" width="38" height="30" rx="2"/><rect x="9" y="13" width="14" height="10" fill="currentColor" fill-opacity=".18"/><rect x="26" y="13" width="9" height="16" fill="currentColor" fill-opacity=".18"/><path d="M9 28l6 7M15 28l6 7M21 28l4 5M37 13l2 3M37 20l2 3" stroke-linecap="round"/></svg></div>
             <h3>Wasted sheets</h3>
             <p>Parts placed by eye on a sheet of plywood leave large offcuts. One extra sheet on a project can cost more than the hardware.</p>
           </article>
-          <article class="card">
-            <div class="icon" aria-hidden="true">🔩</div>
+          <article class="card reveal">
+            <div class="icon" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="8" width="12" height="12" rx="2"/><rect x="30" y="28" width="12" height="12" rx="2"/><text x="12" y="17.5" font-size="9" font-family="Inter" font-weight="700" fill="currentColor" stroke="none" text-anchor="middle">2</text><text x="36" y="37.5" font-size="9" font-family="Inter" font-weight="700" fill="currentColor" stroke="none" text-anchor="middle">1</text><path d="M18 14c12 0 18 4 18 12M33 23l3 4 3-4"/></svg></div>
             <h3>Assembly in the wrong order</h3>
             <p>A back panel glued too early, a dado on the wrong face, a missing hole. Fixing order mistakes means taking it all apart.</p>
           </article>
@@ -138,22 +132,26 @@
         <p class="eyebrow center">How it works</p>
         <h2 class="section-title">From idea to finished piece in four steps</h2>
         <ol class="steps">
-          <li class="step">
+          <li class="step reveal">
+            <svg class="step-art" viewBox="0 0 200 110" aria-hidden="true"><rect x="20" y="10" width="160" height="90" rx="10" fill="#fff" stroke="#e4d8c6" stroke-width="2"/><g font-family="Inter" font-size="10" fill="#6b6258"><rect x="32" y="24" width="10" height="10" rx="3" fill="#8fbf7a"/><text x="48" y="33">Side</text><text x="120" y="33">1800 × 300</text><rect x="32" y="44" width="10" height="10" rx="3" fill="#e9b872"/><text x="48" y="53">Top</text><text x="120" y="53">764 × 300</text><rect x="32" y="64" width="10" height="10" rx="3" fill="#c98f6b"/><text x="48" y="73">Shelf</text><text x="120" y="73">762 × 290</text></g><rect x="32" y="84" width="60" height="8" rx="4" fill="#2f4a3a" opacity=".85"/></svg>
             <span class="step-num">1</span>
             <h3>Describe your project</h3>
             <p>Enter part dimensions, or start from a template like a bookshelf, cabinet or desk. Set material thickness, grain direction and joinery.</p>
           </li>
-          <li class="step">
+          <li class="step reveal">
+            <svg class="step-art" viewBox="0 0 200 110" aria-hidden="true"><g stroke="#b98d55" stroke-width="2"><path d="M40 78 L120 78 L160 58 L80 58 Z" fill="#e7cfa6"/><path d="M40 78v8h80l40-20v-8" fill="#d8b884"/><path d="M40 62 L120 62 L160 42 L80 42 Z" fill="#efd9b4"/><path d="M40 62v8h80l40-20v-8" fill="#d8b884"/><path d="M40 46 L120 46 L160 26 L80 26 Z" fill="#f5e4c7"/><path d="M40 46v8h80l40-20v-8" fill="#d8b884"/></g><text x="100" y="104" text-anchor="middle" font-family="Inter" font-size="10" fill="#6b6258">3 × plywood 18 mm</text></svg>
             <span class="step-num">2</span>
             <h3>Add your stock</h3>
             <p>Tell FairyHooks which sheets and boards you have or plan to buy, including offcuts already in the shop.</p>
           </li>
-          <li class="step">
+          <li class="step reveal">
+            <svg class="step-art" viewBox="0 0 200 110" aria-hidden="true"><rect x="20" y="14" width="160" height="80" rx="4" fill="#efd9b4" stroke="#b98d55" stroke-width="2"/><g stroke="#fff" stroke-width="2"><rect x="24" y="18" width="110" height="20" fill="#8fbf7a"/><rect x="24" y="40" width="110" height="20" fill="#8fbf7a"/><rect x="24" y="62" width="48" height="20" fill="#e9b872"/><rect x="74" y="62" width="48" height="20" fill="#e9b872"/><rect x="136" y="18" width="40" height="30" fill="#c98f6b"/><rect x="136" y="50" width="40" height="30" fill="#c98f6b"/></g><path d="M135 8v94" stroke="#c0392b" stroke-width="2" stroke-dasharray="5 4"/><circle cx="135" cy="8" r="6" fill="#c0392b"/><text x="135" y="11" text-anchor="middle" font-family="Inter" font-size="8" font-weight="700" fill="#fff">1</text></svg>
             <span class="step-num">3</span>
             <h3>Get the cut plan</h3>
             <p>The optimizer nests every part, accounts for kerf and edge trim, and orders the cuts so each rip and crosscut is safe and repeatable.</p>
           </li>
-          <li class="step">
+          <li class="step reveal">
+            <svg class="step-art" viewBox="0 0 200 110" aria-hidden="true"><g stroke="#4a3b2b" stroke-width="1.6" stroke-linejoin="round"><rect x="70" y="10" width="8" height="92" fill="#8fbf7a"/><rect x="122" y="10" width="8" height="92" fill="#8fbf7a"/><rect x="78" y="10" width="44" height="6" fill="#e9b872"/><rect x="78" y="88" width="44" height="6" fill="#e9b872"/><rect x="78" y="94" width="44" height="8" fill="#a7c4d9"/><rect x="78" y="36" width="44" height="5" fill="#c98f6b"/><rect x="78" y="62" width="44" height="5" fill="#c98f6b"/></g><g font-family="Inter" font-size="9" font-weight="700" fill="#fff"><circle cx="150" cy="38" r="9" fill="#2f4a3a"/><text x="150" y="41.5" text-anchor="middle">4</text><circle cx="50" cy="90" r="9" fill="#2f4a3a"/><text x="50" y="93.5" text-anchor="middle">2</text></g><path d="M141 38h-11M59 90h19" stroke="#2f4a3a" stroke-width="1.5"/></svg>
             <span class="step-num">4</span>
             <h3>Follow the assembly guide</h3>
             <p>Labeled parts, a hardware list and illustrated steps in the right order. Print it or keep it open on a tablet at the bench.</p>
@@ -168,39 +166,67 @@
         <p class="eyebrow center">Features</p>
         <h2 class="section-title">Built for the way woodworkers actually work</h2>
         <div class="cards features">
-          <article class="card feature">
+          <article class="card feature reveal">
             <h3>Cut list optimizer</h3>
             <p>Nests parts across sheet goods and boards to use as few sheets as possible, with utilization reported for each one.</p>
           </article>
-          <article class="card feature">
+          <article class="card feature reveal">
             <h3>Kerf and trim compensation</h3>
             <p>Set your blade width and factory edge trim once. Every dimension in the plan already includes them.</p>
           </article>
-          <article class="card feature">
+          <article class="card feature reveal">
             <h3>Grain direction control</h3>
             <p>Lock parts to the grain so doors and visible panels match, or allow rotation for hidden parts to save material.</p>
           </article>
-          <article class="card feature">
+          <article class="card feature reveal">
             <h3>Cutting sequence</h3>
             <p>Rips first, then crosscuts, with each cut numbered. Ready for a table saw, track saw or panel saw.</p>
           </article>
-          <article class="card feature">
+          <article class="card feature reveal">
             <h3>Assembly instructions</h3>
             <p>Step-by-step order, part labels that match the cut list, and a hardware and fastener checklist.</p>
           </article>
-          <article class="card feature">
+          <article class="card feature reveal">
             <h3>Offcut inventory</h3>
             <p>Save usable offcuts and let the next project use them before opening a new sheet.</p>
           </article>
-          <article class="card feature">
+          <article class="card feature reveal">
             <h3>Metric and imperial</h3>
             <p>Work in millimeters or inches with fractions. Switch any time without retyping dimensions.</p>
           </article>
-          <article class="card feature">
+          <article class="card feature reveal">
             <h3>Export and print</h3>
             <p>Export the cut list as CSV, print labeled layouts, or share a plan link with a client or a shop.</p>
           </article>
         </div>
+      </div>
+    </section>
+
+    <!-- ASSEMBLY -->
+    <section class="section assembly" id="assembly">
+      <div class="container">
+        <p class="eyebrow center">Assembly guide</p>
+        <h2 class="section-title">See every step before you pick up a screwdriver</h2>
+        <p class="section-sub">Every part keeps the same letter from the cut plan to the final screw. Press play, or click a step.</p>
+        <div class="asm-grid">
+          <ol class="asm-steps" id="assembly-steps"></ol>
+          <div class="asm-stage-card">
+            <div class="asm-legend" aria-label="Part legend">
+              <span><b class="chip" style="--c:#8fbf7a">A</b>Side</span>
+              <span><b class="chip" style="--c:#e9b872">B</b>Top / bottom</span>
+              <span><b class="chip" style="--c:#c98f6b">C</b>Shelf</span>
+              <span><b class="chip" style="--c:#a7c4d9">D</b>Kick plate</span>
+            </div>
+            <svg id="assembly-stage" class="asm-stage" role="img" aria-label="Isometric bookshelf assembly animation"></svg>
+            <div class="asm-controls">
+              <button type="button" class="round-btn" id="asm-prev" aria-label="Previous step">‹</button>
+              <button type="button" class="round-btn play" id="asm-play" aria-label="Play"><span class="i-play" aria-hidden="true"></span></button>
+              <button type="button" class="round-btn" id="asm-next" aria-label="Next step">›</button>
+              <div class="asm-track"><div class="asm-bar" id="asm-progress"></div></div>
+            </div>
+          </div>
+        </div>
+        <p class="center-cta"><a class="btn" href="#demo">Plan your own project <span aria-hidden="true">→</span></a></p>
       </div>
     </section>
 
@@ -245,7 +271,7 @@
             <fieldset>
               <legend>Parts</legend>
               <div class="parts-head" aria-hidden="true">
-                <span>Name</span><span>Length</span><span>Width</span><span>Qty</span><span></span>
+                <span></span><span>Name</span><span>Length</span><span>Width</span><span>Qty</span><span></span>
               </div>
               <div id="parts"></div>
               <button type="button" class="btn btn-ghost btn-small" id="add-part">+ Add part</button>
@@ -272,15 +298,15 @@
         <p class="eyebrow center">Who it's for</p>
         <h2 class="section-title">One tool, from garage to production shop</h2>
         <div class="cards three">
-          <article class="card">
+          <article class="card reveal">
             <h3>DIY and hobbyists</h3>
             <p>Build your first bookshelf or workbench with a clear shopping list, a plan you can take to the store, and instructions you can follow.</p>
           </article>
-          <article class="card">
+          <article class="card reveal">
             <h3>Professional makers</h3>
             <p>Quote faster with accurate material counts, cut with fewer mistakes, and hand clients a clean assembly document.</p>
           </article>
-          <article class="card">
+          <article class="card reveal">
             <h3>Small shops and teachers</h3>
             <p>Standardize how projects are planned, share plans across the team, and teach students to think in cut sequences.</p>
           </article>
@@ -373,5 +399,6 @@
 
   <script src="assets/js/planner.js"></script>
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/visuals.js"></script>
 </body>
 </html>

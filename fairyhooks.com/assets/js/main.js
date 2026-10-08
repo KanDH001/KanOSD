@@ -98,6 +98,7 @@
     var row = document.createElement("div");
     row.className = "part-row";
     row.innerHTML =
+      '<b class="chip" aria-hidden="true"></b>' +
       '<input aria-label="Part name" class="p-name" type="text" maxlength="40">' +
       '<input aria-label="Length" class="p-w" type="number" min="0" step="any">' +
       '<input aria-label="Width" class="p-h" type="number" min="0" step="any">' +
@@ -108,7 +109,19 @@
     row.querySelector(".p-h").value = h;
     row.querySelector(".p-q").value = qty;
     el.parts.appendChild(row);
+    relabel();
     return row;
+  }
+
+  function letter(i) { return i < 26 ? String.fromCharCode(65 + i) : String(i + 1); }
+
+  function relabel() {
+    Array.prototype.forEach.call(el.parts.children, function (row, i) {
+      var chip = row.querySelector(".chip");
+      chip.textContent = letter(i);
+      chip.style.setProperty("--c", COLORS[i % COLORS.length]);
+      row.dataset.type = i;
+    });
   }
 
   function loadPreset(key) {
@@ -119,8 +132,9 @@
   }
 
   function readParts() {
-    return Array.prototype.map.call(el.parts.querySelectorAll(".part-row"), function (row) {
+    return Array.prototype.map.call(el.parts.querySelectorAll(".part-row"), function (row, i) {
       return {
+        type: i,
         name: row.querySelector(".p-name").value.trim() || "Part",
         w: parseFloat(row.querySelector(".p-w").value),
         h: parseFloat(row.querySelector(".p-h").value),
@@ -148,18 +162,20 @@
       "aria-label": "Cutting layout for sheet " + (i + 1) });
     svg.appendChild(svgEl("rect", { x: 0, y: 0, width: W, height: H, fill: "#efd9b4" }));
     var stroke = Math.max(W, H) / 400;
+    var order = 0;
 
     sheet.placed.forEach(function (p) {
-      var g = svgEl("g", { "class": "part" });
+      var g = svgEl("g", { "class": "part", "data-type": p.type });
+      g.style.setProperty("--d", (Math.min(order++, 30) * 0.05) + "s");
       g.appendChild(svgEl("rect", { x: p.x, y: p.y, width: p.w, height: p.h,
         fill: COLORS[p.type % COLORS.length], "stroke-width": stroke }));
-      var label = p.name + " " + fmt(p.w) + " × " + fmt(p.h) + (p.rot ? " (rotated)" : "");
+      var label = letter(p.type) + " · " + p.name + " " + fmt(p.w) + " × " + fmt(p.h) + (p.rot ? " (rotated)" : "");
       g.appendChild(svgEl("title", {}, label));
-      var fs = Math.min(p.h * 0.28, p.w / Math.max(6, p.name.length * 0.62), Math.max(W, H) / 32);
+      var fs = Math.min(p.h * 0.28, p.w / Math.max(6, (p.name.length + 4) * 0.62), Math.max(W, H) / 32);
       if (fs > Math.max(W, H) / 140) {
         g.appendChild(svgEl("text", { x: p.x + p.w / 2, y: p.y + p.h / 2, "font-size": fs,
           "text-anchor": "middle", "dominant-baseline": "middle", fill: "#1f3328",
-          "font-family": "Inter, sans-serif", "font-weight": 600 }, p.name));
+          "font-family": "Inter, sans-serif", "font-weight": 600 }, letter(p.type) + " · " + p.name));
         if (p.h > fs * 3) {
           g.appendChild(svgEl("text", { x: p.x + p.w / 2, y: p.y + p.h / 2 + fs * 1.2, "font-size": fs * 0.75,
             "text-anchor": "middle", "dominant-baseline": "middle", fill: "#1f3328",
@@ -293,9 +309,36 @@
   el.parts.addEventListener("click", function (e) {
     if (e.target.classList.contains("remove-part")) {
       e.target.parentNode.remove();
+      relabel();
       calculate();
     }
   });
+
+  // Hovering or focusing a part row highlights its pieces on the sheets.
+  function highlight(type) {
+    el.sheets.classList.toggle("dim", type != null);
+    Array.prototype.forEach.call(el.parts.children, function (row) {
+      row.classList.toggle("hl", type != null && row.dataset.type === String(type));
+    });
+    el.sheets.querySelectorAll(".part").forEach(function (n) {
+      n.classList.toggle("hl", type != null && n.getAttribute("data-type") === String(type));
+    });
+  }
+  el.parts.addEventListener("mouseover", function (e) {
+    var row = e.target.closest(".part-row");
+    highlight(row ? row.dataset.type : null);
+  });
+  el.parts.addEventListener("mouseleave", function () { highlight(null); });
+  el.parts.addEventListener("focusin", function (e) {
+    var row = e.target.closest(".part-row");
+    if (row) highlight(row.dataset.type);
+  });
+  el.parts.addEventListener("focusout", function () { highlight(null); });
+  el.sheets.addEventListener("mouseover", function (e) {
+    var g = e.target.closest && e.target.closest(".part");
+    highlight(g ? g.getAttribute("data-type") : null);
+  });
+  el.sheets.addEventListener("mouseleave", function () { highlight(null); });
   el.csv.addEventListener("click", exportCsv);
   form.addEventListener("submit", function (e) { e.preventDefault(); calculate(); });
 

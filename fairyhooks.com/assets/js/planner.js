@@ -27,7 +27,7 @@
     var list = [];
     parts.forEach(function (p, idx) {
       for (var i = 0; i < p.qty; i++) {
-        list.push({ name: p.name, w: p.w, h: p.h, type: idx, copy: i + 1 });
+        list.push({ name: p.name, w: p.w, h: p.h, type: p.type != null ? p.type : idx, copy: i + 1 });
       }
     });
     list.sort(sort || SORTS[0]);
