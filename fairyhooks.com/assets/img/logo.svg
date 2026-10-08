@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="FairyHooks">
+  <rect width="64" height="64" rx="14" fill="#2f4a3a"/>
+  <path d="M32 10c11 6 16 16 14 27-1 7-6 13-14 15-8-2-13-8-14-15-2-11 3-21 14-27z" fill="#8fbf7a"/>
+  <path d="M32 14v36" stroke="#2f4a3a" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M32 24l-7-5M32 32l-9-6M32 40l-7-5M32 24l7-5M32 32l9-6M32 40l7-5" stroke="#2f4a3a" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+  <path d="M32 50v4c0 3 5 3 5 0" stroke="#e9b872" stroke-width="3" stroke-linecap="round" fill="none"/>
+</svg>
